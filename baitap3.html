@@ -5,6 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-
+<label>Bán kính hình tròn :</label>
+<input id="r" type="text">
+<button onclick="S_tron()">Tính diện tích hình tròn</button>
+<p id="s"></p>
+<script>
+    function S_tron() {
+        var r = +document.getElementById('r').value;
+        var s = Math.pow(r,2) * 3.14;
+        document.getElementById('s').innerText = s;
+    }
+</script>
 </body>
 </html>
