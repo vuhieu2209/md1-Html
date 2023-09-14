@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .content {
+            margin: auto;
+            width: 30%;
+            height: 200px;
+            border: 1px solid black;
+            background-color: aqua;
+        }
+        h1 {
+            text-align: center;
+        }
+        .o-nhap-gia-tri {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .o-nhap-gia-tri {
+            width: 100%;
+
+        }
+        .phep-tinh {
+            width: 60%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 20% 20px 20%;
+        }
+        #a,
+        #b {
+            width: 40%;
+            margin: auto;
+            text-align: center;
+        }
+        .o-phep-tinh {
+            width: 20%;
+            height: 25px;
+            margin: auto;
+            border-radius: 5px;
+        }
+        .nut-ket-qua {
+            margin: auto;
+            width: 30%;
+        }
+        #ketqua {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <h1>Tính Toán</h1>
+
+    <div class="o-nhap-gia-tri">
+        <input class="so" type="text" id="a" value="" placeholder="giá trị số 1">
+        <input class="so" type="text" id="b" value="" placeholder="giá trị số 2">
+    </div>
+    <div class="phep-tinh">
+        <button class="o-phep-tinh" onclick="phepcong()">+</button>
+        <button class="o-phep-tinh" onclick="pheptru()">-</button>
+        <button class="o-phep-tinh" onclick="phepnhan()">x</button>
+        <button class="o-phep-tinh" onclick="phepchia()">:</button>
+    </div>
+    <div class="nut-ket-qua">
+        <input type="text" id="ketqua" placeholder="Kết quả">
+    </div>
+</div>
+<script>
+    function phepcong() {
+        var x = document.getElementById("a").value;
+        var y = document.getElementById("b").value;
+        var z = parseInt(x) + parseInt(y);
+        document.getElementById("ketqua").value = z;
+    }
+    function pheptru() {
+        var x = document.getElementById("a").value;
+        var y = document.getElementById("b").value;
+        var z = parseInt(x) - parseInt(y);
+        document.getElementById("ketqua").value = z;
+    }
+    function phepnhan() {
+        var x = document.getElementById("a").value;
+        var y = document.getElementById("b").value;
+        var z = parseInt(x) * parseInt(y);
+        document.getElementById("ketqua").value = z;
+    }
+    function phepchia() {
+        var x = document.getElementById("a").value;
+        var y = document.getElementById("b").value;
+        var z = parseInt(x) / parseInt(y);
+        document.getElementById("ketqua").value = z;
+    }
+</script>
+</body>
+</html>
