@@ -5,6 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-
+<label>Bán kính hình tròn :</label>
+<input id="r" type="text">
+<button onclick="C_tron()">Tính chu vi hình tròn</button>
+<p id="c"></p>
+<script>
+    function C_tron() {
+        var r = +document.getElementById('r').value;
+        var c = r *2 * 3.14;
+        document.getElementById('c').innerText = c;
+    }
+</script>
 </body>
 </html>
