@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập giá trị</label>
+<input id="giatri" type="text">
+<div class="phep-tinh">
+    <button onclick="inputCalculator('1')">1</button>
+    <button onclick="inputCalculator('2')">2</button>
+    <button onclick="inputCalculator('3')">3</button>
+    <button onclick="inputCalculator('4')">4</button>
+    <button onclick="inputCalculator('+')">+</button>
+    <button onclick="result()">=</button>
+    <button onclick="sqrt()">&radic;</button>
+    <script>
+        function inputCalculator(input) {
+            console.log(input)
+            document.getElementById('giatri').value += input;
+        }
+
+        function result() {
+            let input = document.getElementById('giatri').value;
+            document.getElementById('giatri').value = eval(input);
+
+        }
+
+        function sqrt() {
+            let input = document.getElementById('giatri').value;
+            document.getElementById('giatri').value = Math.sqrt(input);
+
+        }
+
+
+    </script>
+</div>
+</body>
+</html>
