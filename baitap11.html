@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="anh1" src="image/gau1.jpg" height="184" width="273" onclick="anh1()"/><br>
+<img id="anh2" src="image/meo2.webp" height="184" width="273" onclick="anh2()"/><br>
+<img id="anh3" src="image/khi3.jpg" height="184" width="273" onclick="anh3()"/><br>
+<script>
+    let count1 = 0;
+    let count2 = 1;
+    let count3 = 2;
+    let img1 = document.getElementById('anh1');
+    let img2 = document.getElementById('anh2');
+    let img3 = document.getElementById('anh3');
+
+    function anh1() {
+        count1++;
+        if (count1 == 1) {
+            img1.src = 'image/meo1.jpg';
+        } else if (count1 == 2) {
+            img1.src = 'image/khi1.jpg';
+        } else {
+            count1 = 0;
+            img1.src = 'image/gau1.jpg';
+        }
+        checkShadow()
+    }
+
+    function anh2() {
+        count2++;
+        if (count2 == 1) {
+            img2.src = 'image/meo2.webp';
+        } else if (count2 == 2) {
+            img2.src = 'image/khi2.jpg';
+        } else {
+            count2 = 0;
+            img2.src = 'image/gau2.jpg';
+        }
+        checkShadow()
+    }
+
+    function anh3() {
+        count3++;
+        if (count3 == 1) {
+            img3.src = 'image/meo3.jpg';
+        } else if (count2 == 2) {
+            img3.src = 'image/khi3.jpg';
+        } else {
+            count3 = 0;
+            img3.src = 'image/gau3.jpg';
+        }
+        checkShadow()
+    }
+
+    function checkShadow() {
+        if (count1 == count2 && count2 == count3) {
+            img1.style.boxShadow = 'red 5px 5px 5px';
+            img2.style.boxShadow = 'red 5px 5px 5px';
+            img3.style.boxShadow = 'red 5px 5px 5px';
+        }else {
+            img1.style.boxShadow = 'blue 5px 5px 5px';
+            img2.style.boxShadow = 'blue 5px 5px 5px';
+            img3.style.boxShadow = 'blue 5px 5px 5px';
+        }
+    }
+</script>
+
+</body>
+</html>
